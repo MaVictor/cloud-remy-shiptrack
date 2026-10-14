@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Notes for <%= reference %></title></head>
+<body>
+  <h1>Notes for order <%= reference %></h1>
+  <% if (!notes.length) { %><p>No notes yet.</p><% } %>
+  <ul>
+  <% notes.forEach(function (n) { %>
+    <li><strong><%= n.author %></strong> <time><%= n.createdAt %></time><p><%= n.body %></p></li>
+  <% }) %>
+  </ul>
+</body>
+</html>

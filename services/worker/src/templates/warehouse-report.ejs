@@ -1,0 +1,7 @@
+<h1>Warehouse throughput, week of <%= weekOf %></h1>
+<table>
+  <tr><th>Warehouse</th><th>Picked</th><th>Shipped</th><th>Avg pick time</th></tr>
+<% rows.forEach(function (r) { %>
+  <tr><td><%= r.warehouse %></td><td><%= r.picked %></td><td><%= r.shipped %></td><td><%= r.avgPickMinutes.toFixed(1) %> min</td></tr>
+<% }) %>
+</table>

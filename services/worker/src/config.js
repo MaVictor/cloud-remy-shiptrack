@@ -1,0 +1,15 @@
+module.exports = {
+  env: process.env.NODE_ENV || 'development',
+  healthPort: Number(process.env.HEALTH_PORT || 9100),
+  apiUrl: process.env.API_URL || 'http://localhost:3000',
+  gatewayUrl: process.env.GATEWAY_URL || 'http://localhost:4000',
+  customsAuthorityUrl: process.env.CUSTOMS_AUTHORITY_URL || 'https://customs.example.gov',
+  serviceSecret: process.env.SERVICE_JWT_SECRET || 'shiptrack-service-dev-secret',
+  erpUrl: process.env.ERP_URL || '',
+  analyticsUrl: process.env.ANALYTICS_MYSQL_URL || '',
+  smtpUrl: process.env.SMTP_URL || '',
+  mailFrom: process.env.MAIL_FROM || 'worker@shiptrack.example.com',
+  opsRecipients: (process.env.OPS_RECIPIENTS || 'ops@shiptrack.example.com').split(','),
+  uploadDir: process.env.UPLOAD_DIR || 'uploads',
+  attachmentRetentionDays: Number(process.env.ATTACHMENT_RETENTION_DAYS || 90),
+};

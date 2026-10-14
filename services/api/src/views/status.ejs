@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>ShipTrack status</title>
+</head>
+<body>
+  <h1>ShipTrack API <small>v<%= version %></small></h1>
+  <p>Environment: <strong><%= env %></strong></p>
+  <p>Up since <%= startedAt %> (<%= uptime %>)</p>
+  <h2>Open orders by status</h2>
+  <ul>
+  <% Object.keys(byStatus).forEach(function (status) { %>
+    <li><%= status %>: <%= byStatus[status] %></li>
+  <% }) %>
+  </ul>
+</body>
+</html>
